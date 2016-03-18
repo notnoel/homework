@@ -11,3 +11,21 @@ average = sum / length;
 }
 return average;
 }
+
+public static int Mode(int array[]) {
+int max=0, count=0;
+int length = array.length;
+for (int i = 0; i <length; ++i) {
+int count = 0;
+for (int k = 0; k <length; ++k) {
+if (array[k] == array[i]) ++count;
+}
+if (count > max)
+{
+max = count;
+max = array[i];
+}
+}
+return max;
+}
+
