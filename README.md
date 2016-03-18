@@ -29,3 +29,14 @@ max = array[i];
 return max;
 }
 
+public static int Median(int array[]) {
+int length=array.length;
+int[] middle = new int[length];
+System.arraycopy(array, 0, middle, 0, middle.length);
+Arrays.sort(middle);
+if (length % 2 == 0) {
+return (middle[(middle.length / 2) - 1] + middle[middle.length / 2]) / 2;
+} else {
+return middle[middle.length / 2];
+}
+}
